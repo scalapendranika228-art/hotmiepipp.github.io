@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#fdeef4;
+  overflow-x:hidden;
+  font-family:Georgia, serif;
+}
+
+/* шапка */
+
+header{
+  width:100%;
+  height:120px;
+  background:white;
+
+  position:relative;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.logo{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  top:15px;
+  z-index:100;
+}
+
+.logo img{
+  width:150px;
+}
+
+.nav{
+  width:100%;
+  max-width:1400px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:0 50px;
+}
+
+.nav-left,
+.nav-right{
+  display:flex;
+  gap:60px;
+}
+
+.nav a{
+  text-decoration:none;
+  color:#2d120f;
+
+  font-size:24px;
+  font-family:'Lobster', cursive;
+
+  transition:0.3s;
+}
+
+.nav a:hover{
+  color:#d98aac;
+}
+
+
+
+
+/* инф */
+
+.about-cafe{
+  width:100%;
+
+  min-height:950px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:120px 8%;
+
+  gap:80px;
+
+  background:#fdeef4;
+}
+
+.cafe-image{
+  width:50%;
+}
+
+.cafe-image img{
+  width:100%;
+
+  border-radius:40px;
+
+  object-fit:cover;
+
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+.cafe-text{
+  width:45%;
+}
+
+.cafe-text h2{
+  font-family:'Lobster', cursive;
+
+  font-size:78px;
+
+  color:#4b1d16;
+
+  margin-bottom:40px;
+}
+
+.cafe-text p{
+  font-size:30px;
+
+  line-height:2;
+
+  color:#4b1d16;
+}
+
+/* наша команда */
+
+.team-section{
+  width:100%;
+
+  padding:140px 50px;
+
+  background:white;
+
+  text-align:center;
+}
+
+.team-title h2{
+  font-family:'Lobster', cursive;
+
+  font-size:85px;
+
+  color:#4b1d16;
+
+  margin-bottom:20px;
+}
+
+.team-title p{
+  font-size:30px;
+
+  color:#4b1d16;
+
+  margin-bottom:100px;
+}
+
+.team-cards{
+  display:flex;
+  justify-content:center;
+  gap:50px;
+
+  flex-wrap:wrap;
+}
+
+.team-card{
+  width:340px;
+
+  background:#fdeef4;
+
+  border-radius:35px;
+
+  padding:35px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+  transition:0.4s;
+}
+
+.team-card:hover{
+  transform:translateY(-10px);
+}
+
+.middle-card{
+  transform:translateY(40px);
+}
+
+.middle-card:hover{
+  transform:translateY(20px);
+}
+
+.team-card img{
+  width:100%;
+  height:360px;
+
+  object-fit:cover;
+
+  border-radius:25px;
+
+  margin-bottom:25px;
+}
+
+.team-card h3{
+  font-family:'Lobster', cursive;
+
+  font-size:48px;
+
+  color:#4b1d16;
+
+  margin-bottom:10px;
+}
+
+.team-card span{
+  display:block;
+
+  color:#FFBED6;
+
+  font-size:24px;
+
+  margin-bottom:20px;
+}
+
+.team-card p{
+  font-size:22px;
+
+  line-height:1.7;
+
+  color:#4b1d16;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media(max-width:1100px){
+
+  .about-cafe{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .cafe-image,
+  .cafe-text{
+    width:100%;
+  }
+
+  .cafe-text h2{
+    font-size:60px;
+  }
+
+  .cafe-text p{
+    font-size:24px;
+  }
+}
+
+@media(max-width:768px){
+
+  header{
+    height:auto;
+    padding:30px 0;
+  }
+
+  .nav{
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .nav-left,
+  .nav-right{
+    gap:25px;
+  }
+
+  .about-hero h1{
+    font-size:60px;
+  }
+
+  .about-hero p{
+    font-size:24px;
+  }
+
+  .team-title h2{
+    font-size:55px;
+  }
+
+  .team-title p{
+    font-size:22px;
+  }
+
+  .team-card{
+    width:100%;
+    max-width:380px;
+  }
+}
